@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  resume: one
+  institution: MyString
+  area: MyString
+  school_url: MyString
+  study_type: MyString
+  start_date: 2020-05-27
+  end_date: 2020-05-27
+  gpa: 1.5
+
+two:
+  resume: two
+  institution: MyString
+  area: MyString
+  school_url: MyString
+  study_type: MyString
+  start_date: 2020-05-27
+  end_date: 2020-05-27
+  gpa: 1.5
