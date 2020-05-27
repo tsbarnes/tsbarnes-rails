@@ -6,5 +6,6 @@ class Resume < ApplicationRecord
   has_many :works
   has_many :volunteers
   has_many :skills
+  has_many :languages
   has_many :interests
 end
