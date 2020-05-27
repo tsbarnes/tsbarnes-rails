@@ -1,5 +1,5 @@
 class Resume < ApplicationRecord
-  has_one :location
+  belongs_to :location
 
   has_many :profiles
   has_many :educations
