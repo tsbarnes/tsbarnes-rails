@@ -7,7 +7,7 @@ class CreateResumes < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :phone
       t.string :summary
-      t.references :location, null: false, foreign_key: true
+      t.references :location, null: true, foreign_key: true
 
       t.timestamps
     end

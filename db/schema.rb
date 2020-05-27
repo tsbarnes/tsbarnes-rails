@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(version: 2020_05_27_171707) do
     t.string "email"
     t.string "phone"
     t.string "summary"
-    t.bigint "location_id", null: false
+    t.bigint "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["location_id"], name: "index_resumes_on_location_id"
