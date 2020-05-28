@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= @location.resume_id %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @location.postal_code %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @location.city %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @location.region %>
+</p>
+
+<p>
+  <strong>Region shorthand:</strong>
+  <%= @location.region_shorthand %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
