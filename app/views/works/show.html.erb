@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= @work.resume_id %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @work.company %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @work.position %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @work.website %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @work.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @work.end_date %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @work.summary %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
