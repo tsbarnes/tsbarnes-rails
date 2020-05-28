@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   resources :works
   resources :volunteers
   resources :highlights
+  resources :skills
+  resources :interests
+  resources :keywords
+  resources :languages
+  resources :references
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

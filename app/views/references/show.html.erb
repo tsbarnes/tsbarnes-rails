@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= @reference.resume_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reference.name %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @reference.reference %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @reference.order %>
+</p>
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>
