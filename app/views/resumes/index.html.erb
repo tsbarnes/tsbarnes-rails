@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>Name</th>
       <th>Label</th>
       <th>Email</th>
       <th>Phone</th>
@@ -18,8 +17,7 @@
   <tbody>
     <% @resumes.each do |resume| %>
       <tr>
-        <td><%= resume.first_name %></td>
-        <td><%= resume.last_name %></td>
+        <td><%= resume.name %></td>
         <td><%= resume.label %></td>
         <td><%= resume.email %></td>
         <td><%= resume.phone %></td>

@@ -25,6 +25,10 @@ gem 'jbuilder', '~> 2.7'
 # Users
 gem 'devise'
 
+# ActiveAdmin
+gem 'activeadmin'
+gem 'inherited_resources'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
