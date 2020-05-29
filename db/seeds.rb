@@ -9,3 +9,4 @@ location = Location.create()
 resume = Resume.create(first_name: "Test", last_name: "Test", location: location)
 skill = Skill.create(resume: resume, name: "Test")
 interest = Interest.create(resume: resume, name: "Test")
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
