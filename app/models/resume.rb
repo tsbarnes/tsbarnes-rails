@@ -1,4 +1,6 @@
 class Resume < ApplicationRecord
+  before_destroy :destroy_dependents
+
   has_one :location
 
   has_many :profiles
@@ -8,6 +10,19 @@ class Resume < ApplicationRecord
   has_many :skills
   has_many :languages
   has_many :interests
+  has_many :references
+
+  def destroy_dependents
+    self.location.destroy
+    self.profiles.destroy_all
+    self.educations.destroy_all
+    self.works.destroy_all
+    self.volunteers.destroy_all
+    self.skills.destroy_all
+    self.languages.destroy_all
+    self.interests.destroy_all
+    self.references.destroy_all
+  end
 
   def self.create_from_json!(data)
     json = JSON.parse(data)
