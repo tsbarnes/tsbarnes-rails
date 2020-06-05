@@ -7,14 +7,11 @@ task :import_json, [:file] => [:environment] do |task, args|
     
     file = File.open(args.file)
     data = file.read
-    json = JSON.parse(data)
 
-    print json['basics']['name']
+    resume = Resume.create_from_json!(data)
+
+    print resume.name
     print "\n"
-
-    resume = Resume.create({
-      name: json['basics']['name']
-    })
   else
     print "No file specified!\n"
     print "Usage:\n"
