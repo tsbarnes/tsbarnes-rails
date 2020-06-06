@@ -25,9 +25,6 @@ gem 'devise'
 gem 'activeadmin'
 gem 'inherited_resources'
 
-# Use Paperclip for images
-gem 'paperclip'
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
