@@ -25,6 +25,9 @@ gem 'devise'
 gem 'activeadmin'
 gem 'inherited_resources'
 
+# Include SocIcon
+gem 'socicon-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
