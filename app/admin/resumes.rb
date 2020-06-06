@@ -1,5 +1,5 @@
 ActiveAdmin.register Resume do
-  includes :location, :profiles, :skills
+  includes :profiles, :skills
   
   permit_params :label, :email, :phone, :summary, :name,
     :address, :city, :region, :region_shorthand, :postal_code, :country_code,
@@ -10,6 +10,12 @@ ActiveAdmin.register Resume do
   collection_action :import_json, method: :put do
     # Resume.create_from_json! params
     redirect_to collection_path, notice: 'JSON successfully imported!'
+  end
+
+  sidebar "Details", only: [:show, :edit] do
+    ul do
+      li link_to "Profiles",    admin_resume_profiles_path(resource)
+    end
   end
 
   show do

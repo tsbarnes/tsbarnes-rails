@@ -1,18 +1,19 @@
 ActiveAdmin.register Skill do
+  belongs_to :resume
+  navigation_menu :resume
+  permit_params :resume_id, :name, :url, :level, :order
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :resume_id, :name, :url, :level, :order
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:resume_id, :name, :url, :level, :order]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
-  
+  form do |f|
+    f.inputs do
+      t.input :name
+      t.input :level
+      t.input :url
+      t.has_many :keywords do |k|
+        k.input :id
+        k.input :resume_id
+        k.input :name
+      end
+    end
+  end
+
 end
