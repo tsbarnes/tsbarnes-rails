@@ -36,13 +36,6 @@
     <%= form.text_field :summary %>
   </div>
 
-  <%= form.fields_for :location do |lf| %>
-    <div class="field">
-      <%= form.label :city %>
-      <%= form.text_field :city %>
-    </div>
-  <% end %>
-
   <div class="actions">
     <%= form.submit %>
   </div>

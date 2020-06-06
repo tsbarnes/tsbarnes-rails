@@ -27,6 +27,10 @@ class Resume < ApplicationRecord
     self.references.destroy_all
   end
 
+  def self.current
+    self.first
+  end
+
   def self.create_from_json!(data)
     json = JSON.parse(data)
 
@@ -35,13 +39,7 @@ class Resume < ApplicationRecord
       label: json['basics']['label'],
       email: json['basics']['email'],
       phone: json['basics']['phone'],
-      summary: json['basics']['summary']
-    })
-
-    resume.save!
-
-    location = Location.create({
-      resume: resume,
+      summary: json['basics']['summary'],
       address: json['basics']['address'],
       postal_code: json['basics']['postalCode'],
       city: json['basics']['city'],
@@ -49,7 +47,7 @@ class Resume < ApplicationRecord
       region: json['basics']['region']
     })
 
-    location.save!
+    resume.save!
     
     pcount = 0
     for pdata in json['basics']['profiles']

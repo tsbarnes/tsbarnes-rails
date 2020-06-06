@@ -15,7 +15,6 @@ class ResumesController < ApplicationController
   # GET /resumes/new
   def new
     @resume = Resume.new
-    @resume.location = Location.new
   end
 
   # GET /resumes/1/edit
@@ -26,10 +25,9 @@ class ResumesController < ApplicationController
   # POST /resumes.json
   def create
     @resume = Resume.new(resume_params)
-    @resume.location = Location.new
 
     respond_to do |format|
-      if @resume.location.save && @resume.save
+      if @resume.save
         format.html { redirect_to @resume, notice: 'Resume was successfully created.' }
         format.json { render :show, status: :created, location: @resume }
       else
@@ -75,6 +73,6 @@ class ResumesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def resume_params
-      params.require(:resume).permit(:name, :label, :email, :phone, :summary, :location_id)
+      params.require(:resume).permit(:name, :label, :email, :phone, :summary, :address, :city, :region, :region_shorthand, :country_code, :postal_code)
     end
 end

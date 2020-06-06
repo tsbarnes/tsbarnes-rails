@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_03_163958) do
+ActiveRecord::Schema.define(version: 2020_06_06_191748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,19 +103,6 @@ ActiveRecord::Schema.define(version: 2020_06_03_163958) do
     t.index ["resume_id"], name: "index_languages_on_resume_id"
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.string "address"
-    t.string "postal_code"
-    t.string "city"
-    t.string "region"
-    t.string "region_shorthand"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "resume_id", null: false
-    t.string "country_code"
-    t.index ["resume_id"], name: "index_locations_on_resume_id"
-  end
-
   create_table "profiles", force: :cascade do |t|
     t.bigint "resume_id", null: false
     t.string "network"
@@ -146,6 +133,12 @@ ActiveRecord::Schema.define(version: 2020_06_03_163958) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.string "address"
+    t.string "city"
+    t.string "postal_code"
+    t.string "country_code"
+    t.string "region"
+    t.string "region_shorthand"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -201,7 +194,6 @@ ActiveRecord::Schema.define(version: 2020_06_03_163958) do
   add_foreign_key "educations", "resumes"
   add_foreign_key "interests", "resumes"
   add_foreign_key "languages", "resumes"
-  add_foreign_key "locations", "resumes"
   add_foreign_key "profiles", "resumes"
   add_foreign_key "references", "resumes"
   add_foreign_key "skills", "resumes"
