@@ -12,6 +12,9 @@ class Resume < ApplicationRecord
   has_many :interests
   has_many :references
 
+  accepts_nested_attributes_for :location, :profiles, :educations, :works, :volunteers,
+                                :skills, :languages, :interests, :references
+
   def destroy_dependents
     self.location.destroy
     self.profiles.destroy_all
