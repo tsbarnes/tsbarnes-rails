@@ -1,34 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @resume.name %>
-</p>
+<%= render @resume %>
 
-<p>
-  <strong>Label:</strong>
-  <%= @resume.label %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @resume.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @resume.phone %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @resume.summary %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= render @resume.location %>
-</p>
-
-<%= link_to 'Edit', edit_resume_path(@resume) %> |
 <%= link_to 'Back', resumes_path %>

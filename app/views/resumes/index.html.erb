@@ -5,31 +5,17 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
       <th>Label</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Summary</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @resumes.each do |resume| %>
       <tr>
-        <td><%= resume.name %></td>
         <td><%= resume.label %></td>
-        <td><%= resume.email %></td>
-        <td><%= resume.phone %></td>
-        <td><%= resume.summary %></td>
         <td><%= link_to 'Show', resume %></td>
-        <td><%= link_to 'Edit', edit_resume_path(resume) %></td>
-        <td><%= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Resume', new_resume_path %>

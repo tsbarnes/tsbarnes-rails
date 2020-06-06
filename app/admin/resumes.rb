@@ -3,18 +3,31 @@ ActiveAdmin.register Resume do
   
   permit_params :label, :email, :phone, :summary, :name,
     :address, :city, :region, :region_shorthand, :postal_code, :country_code,
-    profiles_attributes: [:network, :username, :url, :icon_name, :order, :_destroy],
-    skills_attributes: [:name, :url, :level, :order],
-    educations_attributes: [:institution, :area, :school_url, :study_type, :start_date, :end_date, :gpa]
+    profiles_attributes: [:id, :network, :username, :url, :icon_name, :order, :_destroy],
+    skills_attributes: [:id, :name, :url, :level, :order, :_destroy],
+    volunteers_attributes: [:id, :organization, :position, :website, :start_date, :end_date, :summary, :_destroy],
+    works_attributes: [:id, :company, :position, :website, :start_date, :end_date, :summary, :_destroy],
+    educations_attributes: [:id, :institution, :area, :school_url, :study_type, :start_date, :end_date, :gpa, :_destroy],
+    languages_attributes: [:id, :name, :fluency, :order, :_destroy],
+    interests_attributes: [:id, :name, :order, :_destroy],
+    references_attributes: [:id, :name, :reference, :order, :_destroy]
 
   collection_action :import_json, method: :put do
     # Resume.create_from_json! params
     redirect_to collection_path, notice: 'JSON successfully imported!'
   end
 
+  index do
+    selectable_column
+    column :label
+    actions
+  end
+
   sidebar "Details", only: [:show, :edit] do
     ul do
-      li link_to "Profiles",    admin_resume_profiles_path(resource)
+      li link_to "Profiles", admin_resume_profiles_path(resource)
+      li link_to "Skills", admin_resume_skills_path(resource)
+      li link_to "Interests", admin_resume_interests_path(resource)
     end
   end
 

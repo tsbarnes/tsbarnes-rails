@@ -1,19 +1,18 @@
 ActiveAdmin.register Skill do
   belongs_to :resume
   navigation_menu :resume
-  permit_params :resume_id, :name, :url, :level, :order
+  permit_params :id, :name, :url, :level, :order,
+                keywords_attributes: [:id, :name, :order, :_destroy]
 
   form do |f|
     f.inputs do
-      t.input :name
-      t.input :level
-      t.input :url
-      t.has_many :keywords do |k|
-        k.input :id
-        k.input :resume_id
+      f.input :name
+      f.input :level
+      f.input :url
+      f.has_many :keywords do |k|
         k.input :name
       end
     end
+    f.actions
   end
-
 end

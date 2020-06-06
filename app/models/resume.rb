@@ -182,18 +182,18 @@ class Resume < ApplicationRecord
 
       interest = Interest.create({
         resume: resume,
-        name: sdata['name'],
+        name: Idata['name'],
         order: icount
       })
 
-      skill.save!
+      interest.save!
 
       kcount = 0
-      for kdata in sdata['keywords']
+      for kdata in Idata['keywords']
         kcount = kcount + 1
 
         keyword = Keyword.create({
-          owner: skill,
+          owner: interest,
           name: kdata,
           order: kcount
         })

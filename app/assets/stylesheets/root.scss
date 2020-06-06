@@ -1,0 +1,134 @@
+// Place all the styles related to the Root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+$breakpoint-small: 33.75em;
+$breakpoint-med: 45em;
+$breakpoint-large: 60em;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e5c2de;
+  background-image: url('../img/clouds.gif');
+}
+
+// Grid
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: $breakpoint-small) {
+    width: 80%;
+  }
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: $breakpoint-med) {
+    flex-direction: column;
+  }
+}
+
+.col-4 {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    height: auto;
+  }
+
+  @media only screen and (min-width: $breakpoint-med) {
+    width: 33%;
+  }
+}
+
+.col-6 {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    width: 50%;
+  }
+}
+
+.col-8 {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    width: 66%;
+  }
+}
+
+// Widgets
+
+.card {
+  border: rgba(255, 255, 255, 0.7) solid 1px;
+  border-radius: 0px 0px 1em 1em;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+
+  .card-img, .card-img-top {
+    width: 100%;
+  }
+  
+  .card-header {
+    margin: 0px;
+    padding: 5px;
+    padding-left: 1em;
+    border: rgba(255, 255, 255, 0.7) solid 1px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .card-body {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 5px 2em 5px 2em;
+
+    .card {
+      padding: 3px;
+    }
+  }
+
+  .card-footer {
+    margin: 5px 2em 5px 2em;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.btn, a.btn {
+  display: block;
+  border: rgba(255, 255, 255, 0.7) solid 1px;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+
+  border: rgba(255, 255, 255, 0.7) solid 1px;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 5px;
+
+  a {
+    display: block;
+    margin: 1em;
+  }
+}
