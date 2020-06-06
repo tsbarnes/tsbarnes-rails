@@ -37,11 +37,11 @@ class Resume < ApplicationRecord
       email: json['basics']['email'],
       phone: json['basics']['phone'],
       summary: json['basics']['summary'],
-      address: json['basics']['address'],
-      postal_code: json['basics']['postalCode'],
-      city: json['basics']['city'],
-      country_code: json['basics']['countryCode'],
-      region: json['basics']['region']
+      address: json['basics']['location']['address'],
+      postal_code: json['basics']['location']['postalCode'],
+      city: json['basics']['location']['city'],
+      country_code: json['basics']['location']['countryCode'],
+      region: json['basics']['location']['region']
     })
 
     resume.save!
@@ -182,14 +182,14 @@ class Resume < ApplicationRecord
 
       interest = Interest.create({
         resume: resume,
-        name: Idata['name'],
+        name: idata['name'],
         order: icount
       })
 
       interest.save!
 
       kcount = 0
-      for kdata in Idata['keywords']
+      for kdata in idata['keywords']
         kcount = kcount + 1
 
         keyword = Keyword.create({
