@@ -1,8 +1,6 @@
 class Resume < ApplicationRecord
   before_destroy :destroy_dependents
 
-  has_one :location
-
   has_many :profiles
   has_many :educations
   has_many :works
@@ -12,11 +10,10 @@ class Resume < ApplicationRecord
   has_many :interests
   has_many :references
 
-  accepts_nested_attributes_for :location, :profiles, :educations, :works, :volunteers,
+  accepts_nested_attributes_for :profiles, :educations, :works, :volunteers,
                                 :skills, :languages, :interests, :references
 
   def destroy_dependents
-    self.location.destroy
     self.profiles.destroy_all
     self.educations.destroy_all
     self.works.destroy_all
