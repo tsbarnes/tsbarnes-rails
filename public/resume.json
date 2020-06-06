@@ -1,0 +1,293 @@
+{
+  "basics": {
+    "name": "Thea Barnes",
+    "label": "Software Architect",
+    "picture": "data:image/jpeg;base64,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",
+    "email": "thea@tsbarnes.com",
+    "phone": "(540) 207-6587",
+    "website": "https://tsbarnes.com/",
+    "summary": "Expert coder, amateur writer, D&D nerd, stressed mama, and wildly unsuccessful yoga enthusiast",
+    "location": {
+      "address": "7218 John Taylor Mews",
+      "postalCode": "22546",
+      "city": "Ruther Glen",
+      "countryCode": "US",
+      "region": "Virginia"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "tsbarnes",
+        "url": "http://www.linkedin.com/in/tsbarnes"
+      },
+      {
+        "network": "Facebook",
+        "username": "TheaSBarnes",
+        "url": "http://www.facebook.com/TheaSBarnes"
+      },
+      {
+        "network": "Twitter",
+        "username": "TheaSBarnes",
+        "url": "https://twitter.com/theasbarnes"
+      },
+      {
+        "network": "GitHub",
+        "username": "tsbarnes",
+        "url": "https://github.com/tsbarnes"
+      },
+      {
+        "network": "GitLab",
+        "username": "tsbarnes",
+        "url": "https://gitlab.com/tsbarnes"
+      },
+      {
+        "network": "Bitbucket",
+        "username": "tsbarnes",
+        "url": "https://bitbucket.org/tsbarnes/"
+      },
+      {
+        "network": "Itch.io",
+        "username": "tsbarnes",
+        "url": "https://tsbarnes.itch.io"
+      },
+      {
+        "network": "Medium",
+        "username": "TheaSBarnes",
+        "url": "https://medium.com/@TheaSBarnes"
+      },
+      {
+        "network": "Stack Exchange",
+        "username": "tsbarnes",
+        "url": "https://stackexchange.com/users/515076/tsbarnes"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Germanna Community College",
+      "area": "Information Technology",
+      "studyType": "Other",
+      "startDate": "2001-09-14",
+      "courses": [
+        "C++ Programming",
+        "Java Programming",
+        "Unix Systems",
+        "Network Security and Firewalls",
+        "Database Administration I",
+        "web Design I",
+        "Web Design II"
+      ],
+      "endDate": "2014-12-14"
+    }
+  ],
+  "work": [
+    {
+      "company": "Fuelist",
+      "position": "Developer",
+      "website": "https://fuelist.com/",
+      "startDate": "2020-02-24",
+      "summary": "Ruby on Rails developer for an ecommerce website",
+      "highlights": []
+    },
+    {
+      "company": "Practical Media, Inc.",
+      "position": "Web Mistress",
+      "website": "https://apracticalwedding.com/",
+      "startDate": "2017-10-11",
+      "summary": "Administrating and managing WordPress sites",
+      "highlights": [
+        "Administrated and managed websites",
+        "Managed and made technical decisions for company websites",
+        "Created and maintained WordPress plugins",
+        "Modified and improved WordPress themes",
+        "Handled communicating technical details to non-technical staff",
+        "Kept site uptime high"
+      ],
+      "endDate": "2018-09-07"
+    },
+    {
+      "company": "Modern Ui",
+      "position": "Lead Engineer",
+      "website": "http://modernui.com/",
+      "startDate": "2014-01-15",
+      "summary": "Backend web development and server administration, utilizing PHP, MySQL, and Apache running on Ubuntu Linux.",
+      "highlights": [
+        "Developed database and backend technologies (PHP, Doctrine ORM, MySQL) for a massive music licensing web store",
+        "Refactored and improved several legacy codebases, for performance and better adherence to standards"
+      ],
+      "endDate": "2016-01-01"
+    },
+    {
+      "company": "Awesome Barnes, LLC",
+      "position": "Owner / Lead Software Architect",
+      "website": "https://awesomebarnes.com/",
+      "startDate": "2013-04-08",
+      "summary": "Doing freelance software engineering projects, especially web development and browser extension development, managing business resources, software project management.",
+      "highlights": [
+        "Became one of the top Google Chrome extension developers on Elance",
+        "Developed Google Chrome Native Client applications in C++",
+        "Created modular, scalable backend code for e-commerce sites and web apps using Django, Ruby on Rails, and Zend Framework 2",
+        "Built fast, responsive, elegant frontend web app code using AngularJS, Bootstrap, Foundation, and Angular-Material",
+        "Developed themes and plugins for both Magento and Wordpress",
+        "Chose technologies and implemented designs for a video game console (Chromium OS-based)",
+        "Created specialized software for embedded systems, some using Raspberry Pi, others using custom ARM-based boards",
+        "Configured mobile apps for release for Google Play, Amazon App Store, and Microsoft Windows Store (UWP)",
+        "Manage git repositories, set up virtual machines and development environments (RVM, Docker, virtualenv)",
+        "Co-founded the company with my wife, Jennifer"
+      ]
+    },
+    {
+      "company": "No Dice, LLC",
+      "position": "President / Owner",
+      "website": null,
+      "startDate": "2012-10-06",
+      "summary": "Developed No-Dice, a platform for roleplaying gamers.",
+      "highlights": [
+        "Managed the project and handled DevOps and server administration",
+        "Designed and coded Django HTML templates, LESS/CSS, and JavaScript",
+        "Created the backend code in Python using Django",
+        "Developed RESTful APIs for the site using Django REST Framework",
+        "Maintained the company blog, as well as much of the company&#39;s social media presence",
+        "Co-founded the company and lead development"
+      ],
+      "endDate": "2014-10-23"
+    },
+    {
+      "company": "Archimedes Lever",
+      "position": "Chief Technology Officer",
+      "website": null,
+      "startDate": "2011-12-15",
+      "summary": "Managed the software projects, maintained the company's server, and managed the company's social media presence",
+      "highlights": [
+        "Planned and implemented version control and project management for ubookt.com",
+        "Handled all of the DevOps for the company (Apache Server, Rackspace, Django/Python, Git Version Control)",
+        "Maintained the company's social media presence (Facebook, Twitter, LinkedIn)",
+        "Assisted in development of the site design and code for ubookt.com (Python/Django, CSS3, HTML5)"
+      ],
+      "endDate": "2012-10-26"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "James River Transgender Society",
+      "position": "Social Media Leader",
+      "website": "http://jrts.org/",
+      "startDate": "2018-10-05",
+      "summary": "Handling social media accounts and communicating with members and other leaders",
+      "highlights": [
+        "Managing and moderating social media profiles and groups",
+        "Managing members and contact info for leaders"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Application Development",
+      "level": "Master",
+      "keywords": [
+        "C",
+        "C++",
+        "Python",
+        "GTK+",
+        "GNOME, GTK",
+        "Qt",
+        "Ubuntu",
+        "Threading",
+        "Library/API Development",
+        "Debian/Ubuntu Packages, Apt",
+        "Xamarin.Forms"
+      ]
+    },
+    {
+      "name": "Backend Web Development",
+      "level": "Master",
+      "keywords": [
+        "Django",
+        "Ruby on Rails, Rails 3, Rails 4",
+        "Zend Framework 2, ZF2",
+        "REST APIs",
+        "JSON",
+        "Python",
+        "Ruby",
+        "Node.js",
+        "PHP",
+        "Doctrine ORM, doctrine-orm",
+        "PostgreSQL",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Frontend Web Development",
+      "level": "Master",
+      "keywords": [
+        "AngularJS, Angular 2/4",
+        "Twitter Bootstrap",
+        "Zurb Foundation",
+        "LESS",
+        "Sass/SCSS",
+        "CoffeeScript",
+        "HAML",
+        "HTML 5",
+        "CSS 3",
+        "JavaScript, jQuery"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Master",
+      "keywords": [
+        "Configuration Management",
+        "Continuous Delivery/Deployment",
+        "Version Control",
+        "git",
+        "GitHub",
+        "Bitbucket",
+        "JIRA",
+        "osTicket",
+        "Analytics",
+        "New Relic"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Patrick Wilson",
+      "reference": "[Thea] is an all-star developer. I hired [Thea] to help me get a startup product out of dev, and into the hands of customers. [She] jumped in feet first and turned our ideas into reality. [She] is proactive with [her] architectural design and has been consistently delivering high quality code and solutions to our live servers. I will continue to hire [Thea] for our projects, because I know that I can count on [her] to solve the problems, improve the outcome and deliver the product. [Thea] \"gets it\". And that's important when you're trying to explain complex plans and ideas. Once [she] \"gets it\"... [she's] on the run turning your plans and ideas into reality. I'm truly impressed, daily. [Thea] is going to have a stellar career, I'm happy to be a part of it. Great job [Thea], I can't say that enough."
+    },
+    {
+      "name": "Jenny Barnes",
+      "reference": "Thea is one of the finest programmers, and technical project managers, I have ever known. She effortlessly breaks down complex issues into manageable chunks, and is an expert at making sure we take advantage of open source technologies available to us. She's also great at leading projects involving re-engineering/sanitizing an existing codebase."
+    },
+    {
+      "name": "Steven LePire",
+      "reference": "Thea is very adept at programming, and her facility with C is quite impressive. She is very creative and intelligent, and excellent at out-of-the-box thinking. In addition to having taught Thea both basic Java programming and mathematics, I have contracted her for several projects over the past several years. In this professional capacity, she has never disappointed me."
+    }
+  ],
+  "interests": [
+    {
+      "name": "Open Source",
+      "keywords": [
+        "Android",
+        "Ubuntu",
+        "Linux",
+        "Chrome OS",
+        "SteamOS"
+      ]
+    },
+    {
+      "name": "Home Automation",
+      "keywords": [
+        "Android Wear",
+        "Raspberry Pi",
+        "ARM",
+        "IoT"
+      ]
+    }
+  ]
+}
