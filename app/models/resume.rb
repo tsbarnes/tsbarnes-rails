@@ -1,6 +1,8 @@
 class Resume < ApplicationRecord
   before_destroy :destroy_dependents
 
+  has_one_attached :picture, dependent: :destroy
+
   has_many :profiles
   has_many :educations
   has_many :works

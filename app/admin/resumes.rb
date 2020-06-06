@@ -1,7 +1,7 @@
 ActiveAdmin.register Resume do
   includes :profiles, :skills
   
-  permit_params :label, :email, :phone, :summary, :name,
+  permit_params :label, :email, :phone, :summary, :name, :picture,
     :address, :city, :region, :region_shorthand, :postal_code, :country_code,
     profiles_attributes: [:id, :network, :username, :url, :icon_name, :order, :_destroy],
     skills_attributes: [:id, :name, :url, :level, :order, :_destroy],
@@ -34,6 +34,9 @@ ActiveAdmin.register Resume do
   show do
     panel "Basic Info" do
       attributes_table_for resume do
+        row :picture do |i|
+          image_tag url_for(i.picture)
+        end
         row :name
         row :label
         row :email
@@ -67,6 +70,7 @@ ActiveAdmin.register Resume do
 
   form do |f|
     f.inputs 'Basic Info' do
+      f.input :picture, as: :file
       f.input :name
       f.input :label
     end

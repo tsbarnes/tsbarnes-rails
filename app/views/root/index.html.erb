@@ -1,21 +1,24 @@
   <div class="row">
     <div class="card col-4">
+      <% if current_resume.picture.attached? %>
+        <%= image_tag current_resume.picture, class: 'card-img-top' %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= current_resume.name %></h5>
         <small><%= current_resume.city %></span>, <abbr class="region" title="<%= current_resume.region %>"><%= current_resume.region_shorthand || current_resume.region %></abbr></small>
         <p class="card-text">
-          {% if personal.email %}
-            <div class="email"><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></div>
-          {% endif %}
+          <% if current_resume.email %>
+            <div class="email"><a href="mailto:<%= current_resume.email %>"><%= current_resume.email %></a></div>
+          <% end %>
         </p>
         <p class="card-text">
-          {{ basics.summary }}
+          <%= current_resume.summary %>
         </p>
       </div>
       <div class="card-footer" role="group" aria-label="Social media links">
-        {% for profile in profiles %}
-          <a href="{{ profile.url }}" class="btn socicon-{{ profile.icon_name }}" title="{{ profile }}"></a>
-        {% endfor %}
+        <% for profile in current_resume.profiles %>
+          <a href="<%= profile.url %>" class="btn socicon-<%= profile.icon_name %>" title="<%= profile.network %>"></a>
+        <% end %>
       </div>
     </div>
   </div>
