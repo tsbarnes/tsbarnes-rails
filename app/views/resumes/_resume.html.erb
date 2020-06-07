@@ -2,22 +2,22 @@
 <div id="contactinfo" class="vcard card m-2">
   <h2 class="card-header">Personal Info</h2>
   <div class="card-body">
-    <h1 class="fn n card-title" id="name"><a class="url" href="<%= resume_path(@resume) %>" rel="me"><%= @resume.name %></a></h1>
+    <h1 class="fn n card-title" id="name"><a class="url" href="<%= resume_path(resume) %>" rel="me"><%= resume.name %></a></h1>
     <div class="adr">
-      <span class="locality"><%= @resume.city %></span>, <abbr class="region" title="<%= @resume.region %>"><%= @resume.region_shorthand || @resume.region %></abbr>
+      <span class="locality"><%= resume.city %></span>, <abbr class="region" title="<%= resume.region %>"><%= resume.region_shorthand || resume.region %></abbr>
     </div>
     
-    <% if @resume.email %>
-      <div class="email"><a href="mailto:<%= @resume.email %>"><%= @resume.email %></a></div>
+    <% if resume.email %>
+      <div class="email"><a href="mailto:<%= resume.email %>"><%= resume.email %></a></div>
     <% end %>
 
     <p class="summary card-text">
-      <%= raw @resume.summary %>
+      <%= raw resume.summary %>
     </p>
 
   </div>
   <div class="card-footer bg-light" role="group" aria-label="Social media links">
-    <% for profile in @resume.profiles %>
+    <% for profile in resume.profiles %>
       <a href="<%= profile.url %>" class="btn col-sm-3 socicon-<%= profile.icon_name %>" title="<%= profile.network %>"></a>
     <% end %>
   </div>
@@ -28,14 +28,14 @@
 <div class="card m-2">
   <h2 class="card-header">Skills</h2>
   <ul id="skill-list" class="list-group list-group-flush">
-    <%= render @resume.skills %>
+    <%= render resume.skills %>
   </ul>
 </div>
 
 <div class="card m-2">
   <h2 class="card-header">Interests</h2>
   <ul id="interest-list" class="list-group list-group-flush">
-    <%= render @resume.interests %>
+    <%= render resume.interests %>
   </ul>
 </div>
 <!-- End Skills and Interests -->
@@ -44,14 +44,14 @@
 <div class="card m-2">
   <h2 class="card-header">Experience</h2>
   <ul id="job-list" class="vcalendar list-group list-group-flush">
-    <%= render @resume.works %>
+    <%= render resume.works %>
   </ul>
 </div>
 
 <div class="card m-2">
   <h2 class="card-header">Volunteer Experience</h2>
   <ul id="job-list" class="vcalendar list-group list-group-flush">
-    <%= render @resume.volunteers %>
+    <%= render resume.volunteers %>
   </ul>
 </div>
 <!-- End Work Experience -->
@@ -60,7 +60,7 @@
 <div class="card m-2">
   <h2 class="card-header">Education</h2>
   <ul id="edu-list" class="vcalendar list-group list-group-flush">
-    <%= render @resume.educations %>
+    <%= render resume.educations %>
   </ul>
 </div>
 <!-- End Education -->
@@ -69,7 +69,7 @@
 <div class="card m-2">
   <h2 class="card-header">References</h2>
   <ul id="reference-list" class="list-group list-group-flush">
-    <%= render @resume.references %>
+    <%= render resume.references %>
   </ul>
 </div>
 <!-- End References -->

@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :resumes, only: [:index, :show]
+  resources :projects, only: [:index, :show]
   root "root#index"
 end
