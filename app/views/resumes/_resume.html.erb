@@ -28,13 +28,14 @@
 <div class="card m-2">
   <h2 class="card-header">Skills</h2>
   <ul id="skill-list" class="list-group list-group-flush">
-    <% for skill in @resume.skills %>
-      <li class="skill list-group-item"><span class="skill-title"><%= skill.name %>:&nbsp;</span>
-        <% for k in skill.keywords %>
-          <span class="keyword"><%= k.name %></span>&nbsp;
-        <% end %>
-      </li>
-    <% end %> 
+    <%= render @resume.skills %>
+  </ul>
+</div>
+
+<div class="card m-2">
+  <h2 class="card-header">Interests</h2>
+  <ul id="interest-list" class="list-group list-group-flush">
+    <%= render @resume.interests %>
   </ul>
 </div>
 <!-- End Skills and Interests -->
@@ -98,3 +99,12 @@
   </ul>
 </div>
 <!-- End Education -->
+
+<!-- Begin References -->
+<div class="card m-2">
+  <h2 class="card-header">References</h2>
+  <ul id="reference-list" class="list-group list-group-flush">
+    <%= render @resume.references %>
+  </ul>
+</div>
+<!-- End References -->
