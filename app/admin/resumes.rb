@@ -1,5 +1,5 @@
 ActiveAdmin.register Resume do
-  includes :profiles, :skills
+  includes :profiles, :skills, :works, :volunteers, :educations, :languages, :interests, :references
   
   permit_params :label, :email, :phone, :summary, :name, :picture,
     :address, :city, :region, :region_shorthand, :postal_code, :country_code,
@@ -107,6 +107,14 @@ ActiveAdmin.register Resume do
       end
     end
     f.inputs do
+      f.has_many :interests do |t|
+        t.input :name
+        t.has_many :keywords do |k|
+          k.input :name
+        end
+      end
+    end
+    f.inputs do
       f.has_many :educations do |t|
         t.input :institution
         t.input :area
@@ -115,6 +123,9 @@ ActiveAdmin.register Resume do
         t.input :start_date
         t.input :end_date
         t.input :gpa
+        t.has_many :courses do |c|
+          c.input :name
+        end
       end
     end
     f.actions
