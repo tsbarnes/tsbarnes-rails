@@ -1,0 +1,14 @@
+<li class="experience vevent vcard list-group-item">
+  <strong class="org"><%= volunteer.organization %></strong>
+  <br />
+  <a class="include" href="#name"></a>
+  <strong class="title"><%= volunteer.position %></strong> 
+  <span class="period">(<abbr class="dtstart" title="<%= volunteer.start_date %>"><%= volunteer.start_date %></abbr> - <abbr class="dtend" title="<%= volunteer.end_date %>"><%= volunteer.end_date %></abbr>)</span>
+  
+  <div class="description"><%= volunteer.summary %></div>
+  <ul class="achievements">
+    <% for a in volunteer.highlights %>
+      <li><%= a.description %></li>
+    <% end %>
+  </ul>
+</li>

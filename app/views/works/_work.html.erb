@@ -1,0 +1,14 @@
+<li class="experience vevent vcard list-group-item">
+  <strong class="org"><%= work.company %></strong>
+  <br />
+  <a class="include" href="#name"></a>
+  <strong class="title"><%= work.position %></strong> 
+  <span class="period">(<abbr class="dtstart" title="<%= work.start_date %>"><%= work.start_date %></abbr> - <abbr class="dtend" title="<%= work.end_date %>"><%= work.end_date %></abbr>)</span>
+  
+  <div class="description"><%= work.summary %></div>
+  <ul class="achievements">
+    <% for a in work.highlights %>
+      <li><%= a.description %></li>
+    <% end %>
+  </ul>
+</li>
