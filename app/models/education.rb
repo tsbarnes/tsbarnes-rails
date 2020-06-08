@@ -5,6 +5,8 @@ class Education < ApplicationRecord
 
   has_many :courses
 
+  accepts_nested_attributes_for :courses
+
   def destroy_dependents
     self.courses.destroy_all
   end
