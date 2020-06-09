@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_07_162747) do
+ActiveRecord::Schema.define(version: 2020_06_07_180924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,16 @@ ActiveRecord::Schema.define(version: 2020_06_07_162747) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["resume_id"], name: "index_interests_on_resume_id"
+  end
+
+  create_table "job_projects", force: :cascade do |t|
+    t.string "job_type", null: false
+    t.bigint "job_id", null: false
+    t.bigint "project_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_type", "job_id"], name: "index_job_projects_on_job_type_and_job_id"
+    t.index ["project_id"], name: "index_job_projects_on_project_id"
   end
 
   create_table "keywords", force: :cascade do |t|
@@ -224,6 +234,7 @@ ActiveRecord::Schema.define(version: 2020_06_07_162747) do
   add_foreign_key "courses", "educations"
   add_foreign_key "educations", "resumes"
   add_foreign_key "interests", "resumes"
+  add_foreign_key "job_projects", "projects"
   add_foreign_key "languages", "resumes"
   add_foreign_key "profiles", "resumes"
   add_foreign_key "references", "resumes"
