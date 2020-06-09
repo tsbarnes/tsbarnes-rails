@@ -1,5 +1,26 @@
 ActiveAdmin.register Project do
-  permit_params :name, :summary, :description, :url, :image
+  permit_params :name, :summary, :description, :url, :order, :image
+
+  index do
+    column :name, sortable: :order do |project|
+      link_to project.name, admin_project_path(project)
+    end
+  end
+
+  show do
+    panel "Project" do
+      attributes_table_for project do
+        row :image do |i|
+          image_tag url_for(i.image)
+        end
+        row :name
+        row :summary
+        row :description
+        row :url
+        row :order
+      end
+    end
+  end
 
   form do |f|
     f.semantic_errors
@@ -8,6 +29,7 @@ ActiveAdmin.register Project do
       f.input :summary
       f.input :description
       f.input :url
+      f.input :order
       f.object.image do |at|
         span image_tag(at.image.variant(resize_to_limit: [100,100]))
       end
