@@ -5,16 +5,7 @@
   <div class="card-body">
     <div class="row">
       <% @projects.each do |project| %>
-        <div class="col-4 card">
-          <% if project.image.attached? %>
-            <%= image_tag project.image, class: 'card-img-top' %>
-          <% end %>
-          <div class="card-body">
-              <h5 class="card-title"><%= project.name %></h5>
-              <p class="card-text"><%= project.summary %></p>
-          </div>
-          <a href="<%= project_path(project) %>" class="btn btn-primary">Read More</a>
-        </div>
+        <%= render project, css_classes: 'col-4' %>
       <% end %>
     </div>
   </div>
