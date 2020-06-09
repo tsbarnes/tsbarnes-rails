@@ -28,6 +28,11 @@ ActiveAdmin.register Resume do
       li link_to "Profiles", admin_resume_profiles_path(resource)
       li link_to "Skills", admin_resume_skills_path(resource)
       li link_to "Interests", admin_resume_interests_path(resource)
+      li link_to "Volunteer Experience", admin_resume_volunteers_path(resource)
+      li link_to "Work Experience", admin_resume_works_path(resource)
+      li link_to "Education", admin_resume_educations_path(resource)
+      li link_to "Languages", admin_resume_languages_path(resource)
+      li link_to "References", admin_resume_references_path(resource)
     end
   end
 
@@ -152,6 +157,12 @@ ActiveAdmin.register Resume do
         t.has_many :highlights, sortable: :order, sortable_start: 1 do |c|
           c.input :description
         end
+      end
+    end
+    f.inputs do
+      f.has_many :references, sortable: :order, sortable_start: 1 do |t|
+        t.input :name
+        t.input :reference
       end
     end
     f.actions
