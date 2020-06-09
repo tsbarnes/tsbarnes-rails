@@ -97,19 +97,19 @@ ActiveAdmin.register Resume do
       end
     end
     f.inputs do
-      f.has_many :skills do |t|
+      f.has_many :skills, sortable: :order, sortable_start: 1 do |t|
         t.input :name
         t.input :level
         t.input :url
-        t.has_many :keywords do |k|
+        t.has_many :keywords, sortable: :order, sortable_start: 1 do |k|
           k.input :name
         end
       end
     end
     f.inputs do
-      f.has_many :interests do |t|
+      f.has_many :interests, sortable: :order, sortable_start: 1 do |t|
         t.input :name
-        t.has_many :keywords do |k|
+        t.has_many :keywords, sortable: :order, sortable_start: 1 do |k|
           k.input :name
         end
       end
@@ -123,8 +123,34 @@ ActiveAdmin.register Resume do
         t.input :start_date
         t.input :end_date
         t.input :gpa
-        t.has_many :courses do |c|
+        t.has_many :courses, sortable: :order, sortable_start: 1 do |c|
           c.input :name
+        end
+      end
+    end
+    f.inputs do
+      f.has_many :volunteers do |t|
+        t.input :organization
+        t.input :position
+        t.input :website
+        t.input :start_date
+        t.input :end_date
+        t.input :summary
+        t.has_many :highlights, sortable: :order, sortable_start: 1 do |c|
+          c.input :description
+        end
+      end
+    end
+    f.inputs do
+      f.has_many :works do |t|
+        t.input :company
+        t.input :position
+        t.input :website
+        t.input :start_date
+        t.input :end_date
+        t.input :summary
+        t.has_many :highlights, sortable: :order, sortable_start: 1 do |c|
+          c.input :description
         end
       end
     end

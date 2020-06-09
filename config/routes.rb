@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  resources :resumes, only: [:index, :show]
+  resource :resume, only: [:show]
   resources :projects, only: [:index, :show]
   root "root#index"
 end
