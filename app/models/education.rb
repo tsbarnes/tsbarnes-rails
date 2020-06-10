@@ -7,6 +7,8 @@ class Education < ApplicationRecord
 
   accepts_nested_attributes_for :courses
 
+  default_scope { order(start_date: :desc) }
+
   def destroy_dependents
     self.courses.destroy_all
   end

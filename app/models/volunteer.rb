@@ -6,4 +6,6 @@ class Volunteer < ApplicationRecord
   has_many :projects, through: :job_projects, as: :job
 
   accepts_nested_attributes_for :highlights
+
+  default_scope { order(start_date: :desc) }
 end
