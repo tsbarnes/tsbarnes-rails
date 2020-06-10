@@ -1,5 +1,5 @@
 ActiveAdmin.register JobProject do
-  permit_params :job_type, :job_id, :project_id
+  permit_params :job_type, :job_id, :project_id, :job_identifier
 
   form do |f|
     f.inputs "Job Project" do
