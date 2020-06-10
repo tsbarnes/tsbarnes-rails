@@ -40,7 +40,7 @@ ActiveAdmin.register Resume do
     panel "Basic Info" do
       attributes_table_for resume do
         row :picture do |i|
-          image_tag url_for(i.picture)
+          image_tag url_for(i.picture.variant(resize_to_limit: [100,100]))
         end
         row :name
         row :label

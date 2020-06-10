@@ -11,7 +11,7 @@ ActiveAdmin.register Project do
     panel "Project" do
       attributes_table_for project do
         row :image do |i|
-          image_tag url_for(i.image)
+          image_tag url_for(i.image.variant(resize_to_limit: [100,100]))
         end
         row :name
         row :summary

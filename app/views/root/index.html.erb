@@ -25,7 +25,7 @@
       <h1 class="card-header">Projects</h1>
       <div class="card-body">
         <div class="row no-gutters">
-          <% Project.all.each do |project| %>
+          <% Project.latest.each do |project| %>
             <%= render project, css_classes: 'col-4 flex-grow-1' %>
           <% end %>
         </div>
