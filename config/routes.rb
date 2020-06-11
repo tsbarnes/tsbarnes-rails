@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
   resource :resume, only: [:show]
   resources :projects, only: [:index, :show]
+  resources :articles, only: [:index, :show]
   root "root#index"
 end
