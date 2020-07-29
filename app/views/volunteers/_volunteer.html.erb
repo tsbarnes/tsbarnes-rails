@@ -11,4 +11,9 @@
       <li><%= a.description %></li>
     <% end %>
   </ul>
+  <ul class="projects">
+    <% for p in volunteer.projects %>
+      <li><a href="<%= project_path(p) %>"><%= p.name %></a></li>
+    <% end %>
+  </ul>
 </li>
