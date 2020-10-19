@@ -3,7 +3,7 @@ class Project < ApplicationRecord
 
   has_many :job_projects
 
-  default_scope { order(order: :asc) }
+  default_scope { order(order: :asc, updated_at: :desc) }
 
   scope :latest, -> { order(updated_at: :desc).limit(3) }
 end
