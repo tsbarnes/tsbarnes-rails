@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   @media only screen and (max-width: $breakpoint-med) {
     flex-direction: column;
@@ -42,7 +43,7 @@ body {
   flex-direction: column;
 
   @media only screen and (min-width: $breakpoint-med) {
-    width: 32%;
+    width: 31%;
   }
 }
 
@@ -51,7 +52,7 @@ body {
   flex-direction: column;
 
   @media only screen and (min-width: $breakpoint-med) {
-    width: 49%;
+    width: 48%;
   }
 }
 
@@ -60,7 +61,7 @@ body {
   flex-direction: column;
 
   @media only screen and (min-width: $breakpoint-med) {
-    width: 65%;
+    width: 64%;
   }
 }
 
