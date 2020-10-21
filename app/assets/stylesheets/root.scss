@@ -283,13 +283,15 @@ nav {
   display: flex;
   flex-direction: row;
 
+  background-color: $panel_bg_color;
+  color: $panel_fg_color;
   border: $borders_color solid 1px;
   border-radius: $roundness;
-  background: $wm_title_focused;
-  margin: 5px;
+  margin: $spacing;
 
   a {
     display: block;
+    color: $panel_fg_color;
     margin: $spacing;
   }
 }
