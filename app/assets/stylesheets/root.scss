@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 @import 'variables';
 
 * {
@@ -9,7 +10,7 @@
 }
 
 body {
-  font-family: Zekton, Helvetica, sans-serif;
+  font-family: 'Syne Mono', monospace;
   background-color: $base_color !important;
   //background-image: image-url('clouds.gif');
   color: $text_color;
