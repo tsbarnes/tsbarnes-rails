@@ -16,9 +16,9 @@
     </p>
 
   </div>
-  <div class="card-footer bg-light" role="group" aria-label="Social media links">
+  <div class="card-footer" role="group" aria-label="Social media links">
     <% for profile in resume.profiles %>
-      <a href="<%= profile.url %>" class="btn col-sm-3 socicon-<%= profile.icon_name %>" title="<%= profile.network %>"></a>
+      <a href="<%= profile.url %>" class="btn socicon-<%= profile.icon_name %>" title="<%= profile.network %>"></a>
     <% end %>
   </div>
 </div>

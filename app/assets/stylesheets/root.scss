@@ -4,6 +4,10 @@
 
 @import 'variables';
 
+* {
+  border-radius: 0% !important;
+}
+
 body {
   font-family: Zekton, Helvetica, sans-serif;
   background-color: $base_color !important;
