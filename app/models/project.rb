@@ -5,5 +5,5 @@ class Project < ApplicationRecord
 
   default_scope { order(order: :asc, updated_at: :desc) }
 
-  scope :latest, -> { order(updated_at: :desc).limit(3) }
+  scope :latest, -> { order(updated_at: :desc).limit(6) }
 end
