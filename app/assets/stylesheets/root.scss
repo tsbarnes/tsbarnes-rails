@@ -19,69 +19,6 @@ a:link, a:visited {
   }
 }
 
-// Grid
-
-.container {
-  display: flex;
-  flex-direction: column;
-
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media only screen and (min-width: $breakpoint-small) {
-    width: 80%;
-  }
-
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  @media only screen and (max-width: $breakpoint-med) {
-    flex-direction: column;
-  }
-}
-
-.col-4 {
-  display: flex;
-  flex-direction: column;
-
-  @media only screen and (min-width: $breakpoint-med) {
-    width: 30%;
-  }
-}
-
-.col-6 {
-  display: flex;
-  flex-direction: column;
-
-  @media only screen and (min-width: $breakpoint-med) {
-    width: 48%;
-  }
-}
-
-.col-8 {
-  display: flex;
-  flex-direction: column;
-
-  @media only screen and (min-width: $breakpoint-med) {
-    width: 64%;
-  }
-}
-
-.col-12 {
-  display: flex;
-  flex-direction: column;
-
-  @media only screen and (min-width: $breakpoint-med) {
-    width: 100%;
-  }
-}
-
 // Widgets
 
 .card {
@@ -92,6 +29,10 @@ a:link, a:visited {
   //margin: $spacing;
   display: flex;
   flex-direction: column;
+
+  .list-group-item {
+    background: transparent;
+  }
 
   .card-img, .card-img-top {
     width: 100%;
@@ -112,7 +53,11 @@ a:link, a:visited {
     flex-grow: 1;
     padding: $spacing;
     margin: $spacing;
-
+    border: $borders_color solid 1px;
+    border-radius: $roundness;
+    background: $bg_color;
+    color: $fg_color;
+  
     .card {
       padding: $spacing;
     }
@@ -122,6 +67,11 @@ a:link, a:visited {
     margin: $spacing;
     display: flex;
     flex-direction: row;
+    border: $borders_color solid 1px;
+    border-radius: $roundness;
+    background: $bg_color;
+    color: $fg_color;
+    flex-wrap: wrap;
   }
 }
 
