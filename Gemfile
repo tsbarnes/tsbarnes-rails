@@ -24,6 +24,7 @@ gem 'devise'
 # ActiveAdmin
 gem 'activeadmin'
 gem 'inherited_resources'
+gem 'activeadmin_medium_editor'
 
 # Include SocIcon
 gem 'socicon-rails'

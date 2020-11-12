@@ -21,7 +21,7 @@ ActiveAdmin.register Project do
     f.inputs "parameters" do
       f.input :name
       f.input :summary
-      f.input :description
+      f.input :description, as: :medium_editor
       f.input :url
       f.input :order
       f.object.image do |at|
