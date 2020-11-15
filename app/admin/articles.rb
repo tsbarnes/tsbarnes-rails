@@ -18,8 +18,8 @@ ActiveAdmin.register Article do
     f.inputs 'Blog Article' do
       f.input :header, as: :file
       f.input :title
-      f.input :summary
-      f.input :body
+      f.input :summary, as: :medium_editor
+      f.input :body, as: :medium_editor
     end
     f.actions
   end

@@ -20,7 +20,7 @@ ActiveAdmin.register Project do
     f.semantic_errors
     f.inputs "parameters" do
       f.input :name
-      f.input :summary
+      f.input :summary, as: :medium_editor
       f.input :description, as: :medium_editor
       f.input :url
       f.input :order
