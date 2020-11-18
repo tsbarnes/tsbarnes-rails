@@ -1,0 +1,20 @@
+<% css_classes ||= "m-2"%>
+<% link_target ||= article_path(article) %>
+<div class="card <%= css_classes %>">
+  <% if article.header.attached? %>
+    <a href="<%= link_target %>">
+      <%= image_tag article.header, class: 'card-img-top' %>
+    </a>
+  <% end %>
+  <div class="card-body">
+    <div class="d-flex w-100 justify-content-between">
+        <a href="<%= link_target %>">
+          <h3 class="card-title"><%= article.title %></h3>
+        </a>
+    </div>
+    <h5 class="card-subtitle mb-2 text-muted"><%= article.summary %></h5>
+    <% if css_classes == "m-2" %>
+      <p><%= article.body %></h1>
+    <% end %>
+  </div>
+</div>

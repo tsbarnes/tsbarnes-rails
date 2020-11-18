@@ -1,26 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<% if @article.header.present? %>
-  <%= image_tag url_for(@article.header) %>
-<% end %>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Updated At:</strong>
-  <%= @article.updated_at %>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @article.summary %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= raw @article.body %>
-</p>
-
+<%= render @article %>
 <%= link_to 'Back', articles_path %>
