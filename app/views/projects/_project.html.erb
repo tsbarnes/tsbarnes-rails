@@ -13,9 +13,9 @@
           <h3 class="card-title"><%= project.name %></h3>
         </a>
     </div>
-    <h5 class="card-subtitle mb-2 text-muted"><%= project.summary %></h5>
+    <h5 class="card-subtitle mb-2 text-muted"><%= raw project.summary %></h5>
     <% if css_classes == "m-2" %>
-      <p><%= project.description %></h1>
+      <p><%= raw project.description %></h1>
     <% end %>
   </div>
 </div>
