@@ -1,11 +1,9 @@
-$variant: 'dark';
-
-$bg_color: if($variant != "dark", #d5c4a1, #1d2021);
-$fg_color: if($variant != "dark", #1d2021, #d5c4a1);
-$base_color: if($variant != "dark", #d5c4a1, #1d2021);
-$text_color: if($variant != "dark", #1d2021, #d5c4a1);
-$button_bg_color: if($variant != "dark", #d5c4a1, #1d2021);
-$button_fg_color: if($variant != "dark", #1d2021, #d5c4a1);
+$bg_color: #1d2021;
+$fg_color: #d5c4a1;
+$base_color: #1d2021;
+$text_color: #d5c4a1;
+$button_bg_color: #1d2021;
+$button_fg_color: #d5c4a1;
 $header_button_bg_color: #1d2021;
 $header_button_fg_color: #d5c4a1;
 $selected_bg_color: #b8bb26;
@@ -13,22 +11,18 @@ $selected_fg_color: #1d2021;
 $tooltip_bg_color: #1d2021;
 $tooltip_fg_color: #d5c4a1;
 
-/*$selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));*/
-/*$borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, .88));*/
-$selected_borders_color: if($variant != 'light', mix($selected_bg_color, $fg_color, .3), darken($selected_bg_color, 20%));
-$borders_color: if($variant != 'light', mix($bg_color, $fg_color, .08), shade($bg_color, .88));
-$borders_edge: if($variant != 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+$selected_borders_color: mix($selected_bg_color, $fg_color, .3);
+$borders_color: mix($bg_color, $fg_color, .08);
+$borders_edge: transparentize(white, 0.2);
 
 // dark colors
 $dark_bg_color: #1d2021;
 $dark_fg_color: #d5c4a1;
 
 // shadows
-/*$dark_shadow: #000;*/
-/*$light_shadow: #fff;*/
 $dark_shadow: shade($fg_color, .2);
 $light_shadow: lighten($bg_color, .4);
-$shadow_color: if($variant != 'light', $dark_shadow, $light_shadow);
+$shadow_color: $dark_shadow;
 
 // caret
 $primary_caret_color: #d5c4a1;
@@ -39,16 +33,14 @@ $caret_aspect_ratio: 0.03;
 $black: #000;
 $white: #fff;
 
-/*$button_border_strength: if(lightness($bg) > 50, 0, .1);*/
-/*$button_shadow_strength: if(lightness($bg) > 50, 0, .1);*/
 $button_border_strength: 0.1;
 $button_border: transparentize($button_fg_color, .06 + $button_border_strength);
 $entry_border: $borders_color;
 
-$scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
+$scrollbar_bg_color: mix($base_color, $bg_color, .4);
 $scrollbar_slider_color: mix($bg_color, $fg_color, .5);
 $scrollbar_slider_hover_color: mix($bg_color, $fg_color, .7);
-$scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 5%), lighten($selected_bg_color, 10%));
+$scrollbar_slider_active_color: lighten($selected_bg_color, 10%);
 
 $switch_disabled_bg_color: mix($bg_color, $base_color, .5);
 $switch_disabled_border_color: $bg_color;
@@ -117,11 +109,11 @@ $insensitive_bg_color: $bg_color;
 $insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: if($variant == 'light', darken($base_color, .01), lighten($base_color, .01));
+$backdrop_base_color: lighten($base_color, .01);
 $backdrop_text_color: mix($backdrop_base_color, $text_color, .8);
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, .5);
-$backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
+$backdrop_insensitive_color: lighten($backdrop_bg_color, 15%);
 $backdrop_selected_bg_color: $selected_bg_color;
 $backdrop_selected_fg_color: mix($selected_bg_color, $selected_fg_color, .66);
 $backdrop_borders_color: mix($bg_color, $borders_color, .9);
@@ -135,7 +127,7 @@ $backdrop_osd_fg: mix($osd_fg, $backdrop_osd_base, .5);
 $backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
 $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, .4);
 
-$backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, .2));
+$backdrop_menu_color: mix($backdrop_bg_color, $backdrop_base_color, .2);
 
 $drop_target_color: #4e9a06;
 
@@ -150,3 +142,15 @@ $contrast: .8;
 $breakpoint-small: 33.75em;
 $breakpoint-med: 45em;
 $breakpoint-large: 60em;
+
+
+$theme-colors: (
+  "primary": $selected_bg_color,
+  "secondary": $selected_bg_color,
+  "success": $success_color,
+  "info": $info_bg_color,
+  "warning": $warning_color,
+  "danger": $error_color,
+  "light": $fg_color,
+  "dark": $bg_color
+);

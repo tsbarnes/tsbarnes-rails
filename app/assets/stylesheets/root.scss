@@ -11,8 +11,7 @@
 
 body {
   font-family: 'Syne Mono', monospace;
-  background-color: $base_color !important;
-  //background-image: image-url('clouds.gif');
+  background-color: $base_color;
   color: $text_color;
 }
 
@@ -31,16 +30,9 @@ a:link, a:visited {
   border-radius: $roundness;
   background: $bg_color;
   color: $fg_color;
-  //margin: $spacing;
-  display: flex;
-  flex-direction: column;
 
   .list-group-item {
     background: transparent;
-  }
-
-  .card-img, .card-img-top {
-    width: 100%;
   }
   
   .card-header {
@@ -53,9 +45,6 @@ a:link, a:visited {
   }
   
   .card-body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     padding: $spacing;
     margin: $spacing;
     border: $borders_color solid 1px;
@@ -70,8 +59,6 @@ a:link, a:visited {
 
   .card-footer {
     margin: $spacing;
-    display: flex;
-    flex-direction: row;
     border: $borders_color solid 1px;
     border-radius: $roundness;
     background: $bg_color;
@@ -81,7 +68,6 @@ a:link, a:visited {
 }
 
 .btn, a.btn {
-  display: block;
   border: $borders_color solid 1px;
   border-radius: $roundness;
   background: $button_bg_color;
@@ -97,9 +83,6 @@ a:link, a:visited {
 }
 
 nav {
-  display: flex;
-  flex-direction: row;
-
   background-color: $panel_bg_color;
   color: $panel_fg_color;
   border: $borders_color solid 1px;
