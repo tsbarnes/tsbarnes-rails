@@ -26,8 +26,7 @@ gem 'activeadmin'
 gem 'inherited_resources'
 gem 'activeadmin_medium_editor'
 
-# Include SocIcon and FontAwesome
-gem 'socicon-rails'
+# Include FontAwesome
 gem 'font-awesome-rails'
 
 # Use Active Storage variant
