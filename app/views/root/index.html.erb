@@ -19,7 +19,7 @@
       </div>
       <div class="card-footer" role="group" aria-label="Social media links">
         <% for profile in current_resume.profiles %>
-          <a href="<%= profile.url %>" class="btn socicon-<%= profile.icon_name %>" title="<%= profile.network %>"></a>
+          <%= render profile %>
         <% end %>
       </div>
     </div>
