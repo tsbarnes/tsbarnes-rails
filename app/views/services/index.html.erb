@@ -1,1 +1,10 @@
-<%= render @services %>
+<p id="notice"><%= notice %></p>
+
+<div class="card mt-2">
+  <h1 class="card-header">Services</h1>
+  <div class="card-body">
+    <div class="row">
+      <%= render @services, css_classes: 'col-sm-4' %>
+    </div>
+  </div>
+</div>
