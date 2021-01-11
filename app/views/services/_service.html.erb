@@ -1,0 +1,21 @@
+<% full_page ||= false %>
+<% css_classes ||= "m-2" %>
+<% link_target ||= service_path(service) %>
+<div class="card <%= css_classes %>">
+  <% if service.image.attached? %>
+    <a href="<%= link_target %>">
+      <%= image_tag service.image, class: 'card-img-top' %>
+    </a>
+  <% end %>
+  <div class="card-body">
+    <div class="d-flex w-100 justify-content-between">
+      <a href="<%= link_target %>">
+        <h3 class="card-title"><%= service.name %></h3>
+      </a>
+    </div>
+    <h5 class="card-subtitle mb-2 text-muted"><%= raw service.summary %></h5>
+    <% if full_page != false %>
+      <p><%= raw service.description %></h1>
+    <% end %>
+  </div>
+</div>

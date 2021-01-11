@@ -2,7 +2,7 @@ ActiveAdmin.register Service do
   permit_params :name, :price, :summary, :description, :order
 
   show do
-    panel "Project" do
+    panel "Service" do
       attributes_table_for project do
         row :image do |i|
           image_tag url_for(i.image.variant(resize_to_limit: [100,100]))
