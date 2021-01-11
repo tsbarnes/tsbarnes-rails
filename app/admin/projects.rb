@@ -5,7 +5,11 @@ ActiveAdmin.register Project do
     panel "Project" do
       attributes_table_for project do
         row :image do |i|
-          image_tag url_for(i.image.variant(resize_to_limit: [100,100]))
+          if i.image.present?
+            image_tag url_for(i.image.variant(resize_to_limit: [100,100]))
+          else
+            content_tag(:span, "No image yet")
+          end
         end
         row :name
         row :summary
@@ -24,10 +28,9 @@ ActiveAdmin.register Project do
       f.input :description, as: :medium_editor
       f.input :url
       f.input :order
-      f.object.image do |at|
-        span image_tag(at.image.variant(resize_to_limit: [100,100]))
-      end
-      f.input :image, as: :file
+      f.input :image, as: :file, :hint => f.object.image.present? \
+        ? image_tag(f.object.image.variant(resize_to_limit: [100,100]))
+        : content_tag(:span, "no image yet")
     end
     f.actions
   end

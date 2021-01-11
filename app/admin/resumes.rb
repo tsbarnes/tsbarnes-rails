@@ -40,7 +40,11 @@ ActiveAdmin.register Resume do
     panel "Basic Info" do
       attributes_table_for resume do
         row :picture do |i|
-          image_tag url_for(i.picture.variant(resize_to_limit: [100,100]))
+          if i.picture.present?
+            image_tag url_for(i.picture.variant(resize_to_limit: [100,100]))
+          else
+            content_tag(:span, "No picture yet")
+          end
         end
         row :name
         row :label
@@ -75,7 +79,9 @@ ActiveAdmin.register Resume do
 
   form do |f|
     f.inputs 'Basic Info' do
-      f.input :picture, as: :file
+      f.input :picture, as: :file, :hint => f.object.picture.present? \
+        ? image_tag(f.object.picture.variant(resize_to_limit: [100,100]))
+        : content_tag(:span, "no picture yet")
       f.input :name
       f.input :label
     end
