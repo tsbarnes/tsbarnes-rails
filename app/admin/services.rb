@@ -12,8 +12,12 @@ ActiveAdmin.register Service do
           end
         end
         row :name
-        row :summary
-        row :description
+        row :summary do |s|
+          raw(s.summary)
+        end
+        row :description do |d|
+          raw(d.description)
+        end
         row :price
         row :order
       end

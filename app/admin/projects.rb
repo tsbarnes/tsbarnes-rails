@@ -12,8 +12,12 @@ ActiveAdmin.register Project do
           end
         end
         row :name
-        row :summary
-        row :description
+        row :summary do |s|
+          raw(s.summary)
+        end
+        row :description do |d|
+          raw(d.description)
+        end
         row :url
         row :order
       end

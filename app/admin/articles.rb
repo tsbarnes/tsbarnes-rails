@@ -12,9 +12,11 @@ ActiveAdmin.register Article do
           end
         end
         row :title
-        row :summary
+        row :summary do |s|
+          raw(s.summary)
+        end
         row :body do |b|
-          content_tag(:p, b.body)
+          raw(b.body)
         end
       end
     end
