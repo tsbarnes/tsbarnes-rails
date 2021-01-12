@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_12_030233) do
+ActiveRecord::Schema.define(version: 2021_01_12_030715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(version: 2021_01_12_030233) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "article_categories", force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_article_categories_on_article_id"
+    t.index ["category_id"], name: "index_article_categories_on_category_id"
   end
 
   create_table "articles", force: :cascade do |t|
@@ -162,6 +171,15 @@ ActiveRecord::Schema.define(version: 2021_01_12_030233) do
     t.index ["resume_id"], name: "index_profiles_on_resume_id"
   end
 
+  create_table "project_categories", force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_project_categories_on_category_id"
+    t.index ["project_id"], name: "index_project_categories_on_project_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "summary"
@@ -196,6 +214,15 @@ ActiveRecord::Schema.define(version: 2021_01_12_030233) do
     t.string "country_code"
     t.string "region"
     t.string "region_shorthand"
+  end
+
+  create_table "service_categories", force: :cascade do |t|
+    t.bigint "service_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_service_categories_on_category_id"
+    t.index ["service_id"], name: "index_service_categories_on_service_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -258,13 +285,19 @@ ActiveRecord::Schema.define(version: 2021_01_12_030233) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "article_categories", "articles"
+  add_foreign_key "article_categories", "categories"
   add_foreign_key "courses", "educations"
   add_foreign_key "educations", "resumes"
   add_foreign_key "interests", "resumes"
   add_foreign_key "job_projects", "projects"
   add_foreign_key "languages", "resumes"
   add_foreign_key "profiles", "resumes"
+  add_foreign_key "project_categories", "categories"
+  add_foreign_key "project_categories", "projects"
   add_foreign_key "references", "resumes"
+  add_foreign_key "service_categories", "categories"
+  add_foreign_key "service_categories", "services"
   add_foreign_key "skills", "resumes"
   add_foreign_key "volunteers", "resumes"
   add_foreign_key "works", "resumes"
