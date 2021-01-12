@@ -47,8 +47,6 @@ a:link, a:visited {
   .card-body {
     padding: $spacing;
     margin: $spacing;
-    border: $borders_color solid 1px;
-    border-radius: $roundness;
     background: $bg_color;
     color: $fg_color;
   
@@ -59,8 +57,6 @@ a:link, a:visited {
 
   .card-footer {
     margin: $spacing;
-    border: $borders_color solid 1px;
-    border-radius: $roundness;
     background: $bg_color;
     color: $fg_color;
     flex-wrap: wrap;
