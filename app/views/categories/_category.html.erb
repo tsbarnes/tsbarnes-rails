@@ -1,21 +1,21 @@
 <% full_page ||= false %>
 <% css_classes ||= "m-2"%>
-<% link_target ||= article_path(article) %>
+<% link_target ||= category_path(category) %>
 <div class="card <%= css_classes %>">
-  <% if article.header.attached? %>
+  <% if category.header.attached? %>
     <a href="<%= link_target %>">
-      <%= image_tag article.header, class: 'card-img-top' %>
+      <%= image_tag category.header, class: 'card-img-top' %>
     </a>
   <% end %>
   <div class="card-body">
     <div class="d-flex w-100 justify-content-between">
         <a href="<%= link_target %>">
-          <h3 class="card-title"><%= article.title %></h3>
+          <h3 class="card-title"><%= category.name %></h3>
         </a>
     </div>
-    <h5 class="card-subtitle mb-2 text-muted"><%= article.summary %></h5>
+    <h5 class="card-subtitle mb-2 text-muted"><%= category.summary %></h5>
     <% if full_page != false %>
-      <p><%= article.body %></h1>
+      <p><%= category.description %></p>
     <% end %>
   </div>
 </div>

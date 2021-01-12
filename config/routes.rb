@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :show]
   resources :articles, only: [:index, :show]
   resources :services, only: [:index, :show]
+  resources :categories, only: [:index, :show]
   root "root#index"
 end
