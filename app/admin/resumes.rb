@@ -75,6 +75,24 @@ ActiveAdmin.register Resume do
         column :url
       end
     end
+
+    panel "Interests" do
+      table_for resume.interests do
+        column :name
+      end
+    end
+
+    panel "Education" do
+      table_for resume.educations do
+        column :institution
+        column :area
+        column :school_url
+        column :study_type
+        column :start_date
+        column :end_date
+        column :gpa
+      end
+    end
   end
 
   form do |f|
