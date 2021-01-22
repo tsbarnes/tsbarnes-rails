@@ -14,9 +14,13 @@
         <p class="card-text">
           <%= current_resume.summary %>
         </p>
-        <script src="https://liberapay.com/tsbarnes/widgets/button.js"></script>
-        <noscript><a href="https://liberapay.com/tsbarnes/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
-        <iframe src="https://github.com/sponsors/tsbarnes/button" title="Sponsor tsbarnes" height="35" width="116" style="border: 0;"></iframe>
+        <div>
+          <script src="https://liberapay.com/tsbarnes/widgets/button.js"></script>
+          <noscript><a href="https://liberapay.com/tsbarnes/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+        </div>
+        <div>
+          <iframe src="https://github.com/sponsors/tsbarnes/button" title="Sponsor tsbarnes" height="35" width="116" style="border: 0;"></iframe>
+        </div>
       </div>
       <div class="card-footer" role="group" aria-label="Social media links">
         <% for profile in current_resume.profiles %>
