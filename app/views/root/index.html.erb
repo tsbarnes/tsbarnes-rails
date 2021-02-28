@@ -21,6 +21,17 @@
         <div>
           <iframe src="https://github.com/sponsors/tsbarnes/button" title="Sponsor tsbarnes" height="35" width="116" style="border: 0;"></iframe>
         </div>
+        <div>
+          <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+          <script>
+            kofiWidgetOverlay.draw('theabarnes', {
+              'type': 'floating-chat',
+              'floating-chat.donateButton.text': 'Tip Me',
+              'floating-chat.donateButton.background-color': '#f45d22',
+              'floating-chat.donateButton.text-color': '#fff'
+            });
+          </script>
+        </div>
       </div>
       <div class="card-footer" role="group" aria-label="Social media links">
         <% for profile in current_resume.profiles %>
