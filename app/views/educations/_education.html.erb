@@ -1,4 +1,9 @@
 <li class="education vevent vcard list-group-item">
   <span class="period"><abbr class="dtstart" title="<%= education.start_date %>"><%= education.start_date %></abbr> - <abbr class="dtend" title="<%= education.end_date %>"><%= education.end_date %></abbr></span> - 
   <span class="org"><%= education.institution %></span>
+  <ul>
+    <% for course in education.courses %>
+      <li><%= course.name %></li>
+    <% end %>
+  </ul>
 </li>
