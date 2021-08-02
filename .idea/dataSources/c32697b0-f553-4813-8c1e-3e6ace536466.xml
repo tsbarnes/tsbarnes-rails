@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="Rails tsbarnes-rails: development">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.20">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.23">
     <root id="1">
       <ServerVersion>13.2</ServerVersion>
       <DateStyle>mdy</DateStyle>
@@ -1464,17 +1464,17 @@ sequence|table|16859|16861|1
     </role>
     <role id="17" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
-      <SuperRole>1</SuperRole>
       <CreateDb>1</CreateDb>
       <CreateRole>1</CreateRole>
       <CanLogin>1</CanLogin>
+      <SuperRole>1</SuperRole>
       <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
     <role id="18" parent="1" name="thea">
       <ObjectId>16384</ObjectId>
-      <SuperRole>1</SuperRole>
       <CanLogin>1</CanLogin>
+      <SuperRole>1</SuperRole>
     </role>
     <tablespace id="19" parent="1" name="pg_default">
       <ObjectId>1663</ObjectId>
