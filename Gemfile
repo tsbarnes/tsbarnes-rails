@@ -35,6 +35,9 @@ gem 'image_processing', '~> 1.2'
 # React
 gem 'react-rails'
 
+# Stripe
+gem 'stripe'
+
 # AWS S3 support
 gem "aws-sdk-s3", require: false
 
