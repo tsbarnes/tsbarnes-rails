@@ -11,8 +11,9 @@
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'server_rendering', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>

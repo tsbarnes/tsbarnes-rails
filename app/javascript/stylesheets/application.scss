@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import 'quartz/variables';
+@import 'quartz/bootswatch';
+@import '~bootstrap/scss/bootstrap';
+
+nav {
+  margin-bottom: 0.5em;
+}
+
+body {
+  padding-bottom: 1em;
+}
