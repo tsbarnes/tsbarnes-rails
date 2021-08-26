@@ -45,7 +45,7 @@ gem "aws-sdk-s3", require: false
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Bootstrap for styles
-gem 'bootstrap', '~> 4.5.2'
+gem 'bootstrap'
 gem 'jquery-rails'
 
 # Analytics
