@@ -1,6 +1,9 @@
 {
   "name": "tsbarnes",
   "private": true,
+  "engines": {
+    "node": "12.13"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
     "@popperjs/core": "^2.9.3",
