@@ -376,6 +376,7 @@ DEPENDENCIES
   inherited_resources
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  matrix
   pg (>= 0.18, < 2.0)
   prawn
   prawn-html
