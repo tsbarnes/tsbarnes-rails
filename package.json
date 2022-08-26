@@ -26,6 +26,7 @@
     "sass-loader": "^10.2.1",
     "style-loader": "2.x",
     "turbolinks": "^5.2.0",
+    "webpack": "^4.9.2",
     "webpack-cli": "^4.9.2"
   },
   "version": "0.1.0",
