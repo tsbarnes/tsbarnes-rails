@@ -2,7 +2,7 @@
   "name": "tsbarnes",
   "private": true,
   "engines": {
-    "node": "~16.14.0"
+    "node": "~16.17.0"
   },
   "dependencies": {
     "@babel/preset-react": "^7.16.7",
