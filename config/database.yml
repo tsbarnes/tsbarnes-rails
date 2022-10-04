@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: tsbarnes_production
-  username: tsbarnes
-  password: <%= ENV['TSBARNES_DATABASE_PASSWORD'] %>
+  host: <%= ENV['PGHOST'] %>
+  port: <%= ENV['PGPORT'] %>
+  database: <%= ENV['PGDATABASE'] %>
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
